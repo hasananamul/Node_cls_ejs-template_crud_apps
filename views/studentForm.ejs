@@ -1,0 +1,59 @@
+<body>
+      
+      <div class="container">
+            <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8">
+                        <div class="card">
+                          <div class="card">
+                            <div class="card-header d-flex justify-content-between">
+                                <h4 class="card-title"> Add new student </h4>
+                                <div class="add_student_btn">
+                                    <a class="btn btn-md btn-primary" href="/student"> Back to dashbord </a>
+                                </div>
+                              </div>
+                                    <div class="card-body">
+                                      <form action="/student/addStudent" method="post" enctype="multipart/form-data" >
+                                          <div class="mb-3">
+                                            <label for="name" class="form-label"> Your name</label>
+                                            <input type="text"
+                                            class="form-control" name="name" id="name" >
+                                          </div> 
+
+                                          <div class="mb-3">
+                                            <label for="email" class="form-label"> Your email</label>
+                                            <input type="email"
+                                            class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="">
+                                          </div>
+
+                                          <div class="mb-3">
+                                            <label for="phone" class="form-label"> Phone number</label>
+                                            <input type="text"
+                                            class="form-control" name="phone" id="phone" aria-describedby="helpId" placeholder="">
+                                          </div>
+
+                                          <div class="mb-3">
+                                            <label for="location" class="form-label"> Location</label>
+                                            <input type="text"
+                                            class="form-control" name="location" id="location" aria-describedby="helpId" placeholder="">
+                                          </div>
+
+                                          <div class="mb-3">
+                                            <label for="photo" class="form-label"> Upload photo</label>
+                                            <input type="file"
+                                            class="form-control" name="photo" id="photo" aria-describedby="helpId" placeholder="">
+                                          </div>
+
+                                          <div class="text-center mb-3">
+                                            <input type="submit"
+                                            class="btn btn-md btn-primary w-100"id="submit_button" >
+                                          </div>
+                                      </form>                                  
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="col-md-2"></div>
+            </div>
+      </div>
+</body>

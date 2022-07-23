@@ -1,0 +1,54 @@
+<body>
+      <div class="container">
+            <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8">
+                        <div class="card">
+                          <div class="card">
+                            <div class="card-header d-flex justify-content-between">
+                                <%- title %> 
+                                <div class="add_student_btn">
+                                    <a class="btn btn-md btn-primary" href="student/studentForm"> Add student</a>
+                                </div>
+                              </div>
+                                    <div class="card-body">
+                                     <table class="table">
+                                          <thead>
+                                                <tr>
+                                                      <th>SL</th>
+                                                      <th>Name</th>
+                                                      <th>Email</th>
+                                                      <th>Phone</th>
+                                                      <th>Skill</th>
+                                                      <th>Photo</th>
+                                                      <th>Action</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody>
+                                                <% data.forEach((element,index) => { %>
+                                                 <tr>
+                                                      <td><%= index + 1 %> </td>
+                                                      <td> <%= element.name %>  </td>
+                                                      <td><%= element.email %></td>
+                                                      <td><%= element.phone %></td>
+                                                      <td>MERN Stack</td>
+                                                      <td><img style="width: 40px;height : 30px;object-fit : cover" src="../assets/upload/<%= element.photo %>" alt="flower"></td>
+                                                      <td>
+                                                            <a class="btn btn-sm btn-primary" href="/student/<%= element._id %> "><i class="fa fa-eye"></i></a>
+                                                            <a class="btn btn-sm btn-info" href="/student/editStudentForm/<%= element._id %>"><i class="fa fa-edit"></i></a>
+                                                            <a class="btn btn-sm btn-danger" href="/student/delete/<%= element._id %> "><i class="fa fa-trash"></i></a>
+                                                      </td>
+                                                </tr>
+                                                <% }) %>
+                                                
+                                          </tbody>
+                                     </table>
+                                     
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="col-md-2"></div>
+            </div>
+      </div>
+</body>
